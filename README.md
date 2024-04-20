@@ -1,4 +1,1 @@
-my deno-scripts
-```
-deno run
-```
+my deno scripts
