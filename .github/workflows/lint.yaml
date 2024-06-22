@@ -1,0 +1,31 @@
+name: Lint
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4.1.7
+
+      - name: Setup Deno
+        uses: denoland/setup-deno@v1.1.4
+        with:
+          deno-version: 1.44.4
+
+      - name: Run Deno fmt check
+        run: deno fmt --check
+
+      - name: Run Deno lint
+        run: deno lint
