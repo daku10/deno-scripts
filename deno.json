@@ -1,4 +1,14 @@
 {
+  "name": "@daku10/deno-scripts",
+  "version": "0.0.1",
+  "exports": "./src/mod.ts",
+  "publish": {
+    "include": [
+      "src/**/*.ts",
+      "LICENSE",
+      "README.md"
+    ]
+  },
   "imports": {
     "@std/cli": "jsr:@std/cli@^0.224.7"
   },
