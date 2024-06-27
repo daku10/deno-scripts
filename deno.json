@@ -1,0 +1,8 @@
+{
+  "imports": {
+    "@std/cli": "jsr:@std/cli@^0.224.7"
+  },
+  "compilerOptions": {
+    "noUncheckedIndexedAccess": true
+  }
+}
