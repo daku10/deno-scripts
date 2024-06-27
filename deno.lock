@@ -1,0 +1,19 @@
+{
+  "version": "3",
+  "packages": {
+    "specifiers": {
+      "jsr:@std/cli@^0.224.7": "jsr:@std/cli@0.224.7"
+    },
+    "jsr": {
+      "@std/cli@0.224.7": {
+        "integrity": "654ca6477518e5e3a0d3fabafb2789e92b8c0febf1a1d24ba4b567aba94b5977"
+      }
+    }
+  },
+  "remote": {},
+  "workspace": {
+    "dependencies": [
+      "jsr:@std/cli@^0.224.7"
+    ]
+  }
+}
