@@ -19,10 +19,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4.1.7
 
+      - name: Extract Deno version
+        id: version
+        run: awk -F '"' '/deno =/ { print $2 }' .mise.toml
+
       - name: Setup Deno
         uses: denoland/setup-deno@v1.1.4
         with:
-          deno-version: 1.44.4
+          deno-version: ${{ steps.version.outputs.version }}
 
       - name: Run Deno fmt check
         run: deno fmt --check
