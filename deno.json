@@ -10,7 +10,8 @@
     ]
   },
   "imports": {
-    "@std/cli": "jsr:@std/cli@^0.224.7"
+    "@std/cli": "jsr:@std/cli@^0.224.7",
+    "@std/fs": "jsr:@std/fs@^1.0.1"
   },
   "compilerOptions": {
     "noUncheckedIndexedAccess": true
